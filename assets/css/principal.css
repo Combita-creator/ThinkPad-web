@@ -1,3 +1,30 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #a17f7f;
+}
+
+/*Estilos para el header*/
+/*Imagen de header*/
+.logo-header {
+    max-height: 100px;
+    width: auto;
+    padding-right: 60px;
+}
+
+
+/*Estilos para la barra lateral*/
+.barra-lateral {
+    padding-top: 120px;
+
+}
+
+.sidebar {
+    min-height: 100vh;
+    position: fixed;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+    display: none;
+    }
 }
