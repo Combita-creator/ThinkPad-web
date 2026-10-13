@@ -9,7 +9,7 @@
     --color-fondo-tarjeta: #1a1a1a;
     /*Gris para tarjetas y contenedores */
     --color-acento-rojo: #e2231a;
-    /*Rojo clásico ThinkPad */
+    /*Rojo ThinkPad */
     --color-item-hover: #282828;
     /*Gris medio para hover en menu */
     --color-texto-principal: #ffffff;
@@ -31,7 +31,7 @@ body {
     color: var(--color-texto-principal);
 }
 
-/* Header / Navbar */
+/* Header y Navbar */
 .navbar {
     background-color: var(--color-header) !important;
     border-bottom: 1px solid var(--color-borde);
@@ -45,14 +45,21 @@ body {
     padding: 2px 0;
 }
 
-/*imagen de main*/
+/*imagen de main en index*/
 .thinkpad-main {
-max-height: 170px;
+max-height: 190px;
     width: auto;
     object-fit: contain;
     padding: 2px 0;
 }
 
+/*imagen de main en modelos*/
+.thinkpad-modelos {
+max-height: 250px;
+    width: auto;
+    object-fit: contain;
+    padding: 2px 0;
+}
 /* Espaciado del contenedor principal para que el header fijo no tape el contenido */
 .contenedor-principal {
     padding-top: var(--alto-header);
