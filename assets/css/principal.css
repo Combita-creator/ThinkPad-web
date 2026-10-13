@@ -1,30 +1,133 @@
-body {
-    background-color: #a17f7f;
+:root {
+    /* Colores estilo ThinkPad*/
+    --color-fondo-principal: #111111;
+    /*Negro profundo del panel general */
+    --color-sidebar: #191919;
+    /*fondo oscuro para la sidebar */
+    --color-header: #161616;
+    /*Fondo del header */
+    --color-fondo-tarjeta: #1a1a1a;
+    /*Gris para tarjetas y contenedores */
+    --color-acento-rojo: #e2231a;
+    /*Rojo clásico ThinkPad */
+    --color-item-hover: #282828;
+    /*Gris medio para hover en menu */
+    --color-texto-principal: #ffffff;
+    /*Texto blanco */
+    --color-texto-secundario: #a0a0a0;
+    /*Gris claro para descripciones e iconos */
+    --color-borde: #2a2a2a;
+    /*Borde sutil para divisiones */
+
+    /* Dimensiones */
+    --ancho-barra-lateral: 220px;
+    /* Ancho fijo para el menu lateral */
+    --alto-header: 110px;
+    /* Alto para acomodar el logo */
 }
 
-/*Estilos para el header*/
-/*Imagen de header*/
+body {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+}
+
+/* Header / Navbar */
+.navbar {
+    background-color: var(--color-header) !important;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Imagen del logo en el header */
 .logo-header {
     max-height: 100px;
     width: auto;
-    padding-right: 60px;
+    object-fit: contain;
+    padding: 2px 0;
 }
 
-
-/*Estilos para la barra lateral*/
-.barra-lateral {
-    padding-top: 120px;
-
-}
-
-.sidebar {
-    min-height: 100vh;
-    position: fixed;
+/*imagen de main*/
+.thinkpad-main {
+max-height: 170px;
     width: auto;
+    object-fit: contain;
+    padding: 2px 0;
 }
 
-@media (max-width: 768px) {
+/* Espaciado del contenedor principal para que el header fijo no tape el contenido */
+.contenedor-principal {
+    padding-top: var(--alto-header);
+    background-color: var(--color-sidebar);
+}
+
+/* Sidebar responsiva */
+
+/* Escritorio */
+@media (min-width: 768px) {
     .sidebar {
-    display: none;
+        position: fixed;
+        top: var(--alto-header);
+        bottom: 0;
+        left: 0;
+        width: var(--ancho-barra-lateral);
+        background-color: var(--color-sidebar);
+        border-right: 1px solid var(--color-borde);
+        padding: 20px 12px;
+        overflow-y: auto;
+        z-index: 100;
     }
+
+    /* Empuja el main a la derecha para que no quede debajo del sidebar */
+    .area-contenido {
+        margin-left: var(--ancho-barra-lateral);
+    }
+}
+
+/* Celulares */
+@media (max-width: 767.98px) {
+    .sidebar {
+        display: none;
+        /* Oculta la barra lateral en pantallas pequeñas */
+    }
+
+    .area-contenido {
+        margin-left: 0;
+    }
+}
+
+/*Estilos para los enlaces del sidebar*/
+.sidebar .nav-link {
+    color: var(--color-texto-secundario);
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    /* Bordesestilo tarjeta */
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Hover al pasar el mouse */
+.sidebar .nav-link:hover {
+    background-color: var(--color-item-hover);
+    color: var(--color-texto-principal);
+}
+
+/* Estado activo (boton rojo ThinkPad) */
+.sidebar .nav-link.active {
+    background-color: var(--color-acento-rojo) !important;
+    color: var(--color-texto-principal) !important;
+}
+
+/* Detalles estilo THINKPAD */
+.text-danger {
+    color: var(--color-acento-rojo) !important;
+}
+
+.bg-danger {
+    background-color: var(--color-acento-rojo) !important;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-acento-rojo);
+    border-color: var(--color-acento-rojo);
+    color: var(--color-texto-principal);
 }

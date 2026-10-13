@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thinkpad</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta name="description" content="Sitio web de thinkpads">
+    <meta property="og:title" content="Thinkpads web">
+    <meta property="og:description" content="Sitio web de thinkpads">
+    <meta property="og:image"
+        content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiomdR-IUrfdJH8LdxcLRVloBBEEiRqzirXUHLtBpHCUQtKhyphenhyphentJ_E8-VNI6B5BRiUVXPC-n288pUNRX5QH9K2QOa7dctwJhCQs0l07fIOYgoOs9xORdSghfnP_c9oMGdWN9sqpoUJYBx4pXRlRW_frcy0LSZQxUCY0lUB-VyK5BWsj4NY0vpgo0WhTLJxc/s1600/backyardigans%20Pablo%20Personaje%20010.png">
+    <meta property="og:url" content="https://combita-creator.github.io/proyecto-3-portafol-personal/">
+    <link rel="icon" type="image/x-png" href="assets/img/thinkpad-logo.png">
+    <title>ThinkPad Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/principal.css">
 </head>
 
 <body>
-    <!--El header por su pollo-->
+    <!--Header-->
     <header data-bs-theme="dark">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
-                <!--Imagen de header-->
+                <!-- Logo -->
                 <a href="index.html" class="navbar-brand">
-                    <img src="assets/img/thinkpad-logo.png" alt="Thinkpad Logo" class="logo-header">
+                    <img src="assets/img/thinkpad-logo.png" alt="ThinkPad Logo" class="logo-header">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,35 +33,32 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="historia.html">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="modelos.html">Modelos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comunidad.html">Comunidad</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!--La sidebar o barra lateral-->
-    <div class="container-fluid barra-lateral">
+    <!--Contenedor Principal-->
+    <div class="container-fluid contenedor-principal">
         <div class="row">
 
-
-            <nav class="col-md-3 col-lg-2 bg-dark sidebar">
-
+            <!--Sidebar-->
+            <nav class="col-md-3 col-lg-2 sidebar">
                 <ul class="nav nav-pills flex-column">
-
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link active">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a href="historia.html" class="nav-link">Historia</a>
@@ -65,28 +69,137 @@
                     <li class="nav-item">
                         <a href="comunidad.html" class="nav-link">Comunidad</a>
                     </li>
-
                 </ul>
-
             </nav>
 
-    <!--El main o contenido principal-->
-            <main class="col-md-9 col-lg-10 ms-sm-auto px-md-4">
+            <!-- el contenido Principal-->
+            <main class="col-md-9 col-lg-10 area-contenido px-md-4 py-4">
+                <!-- Título principal -->
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom border-secondary">
+                    <h1 class="h2 text-light">Inicio ThinkPad</h1>
+                    <span class="badge bg-danger">Serie Leyenda</span>
+                </div>
 
+                <!--Fila de Tarjetas de Resume-->
+                <div class="row g-4 mb-4">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-12 col-md-4">
+                        <div class="card bg-dark text-light border-secondary h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Legado e Historia</h5>
+                                <p class="card-text">Más de 30 años de diseño industrial icónico, originado en los
+                                    laboratorios de Yamato, Japón.</p>
+                                <a href="historia.html" class="btn btn-outline-light btn-sm">Explorar historia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-12 col-md-4">
+                        <div class="card bg-dark text-light border-secondary h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Modelos Emblemáticos</h5>
+                                <p class="card-text">Desde la clásica 701c (Teclado Mariposa) hasta las potentes series
+                                    X1 Carbon y T480.</p>
+                                <a href="modelos.html" class="btn btn-outline-light btn-sm">Ver catálogo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-12 col-md-4">
+                        <div class="card bg-dark text-light border-secondary h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Comunidad Tech</h5>
+                                <p class="card-text">Modding, soporte Linux, mantenimiento DIY y cultura de durabilidad
+                                    militar (MIL-STD).</p>
+                                <a href="comunidad.html" class="btn btn-outline-light btn-sm">Unirse al foro</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Tarjetas inferiores-->
+                <section class="row g-4 mb-4">
+                    <!-- Tarjeta 4 -->
+                    <div class="col-lg-6 col-md-6">
+                        <section class="card bg-dark text-light border-secondary h-100">
+                            <section class="card-body">
+
+                                <!---Titulos-->
+                                <h5 class="card-title text-danger">Thinkpad Destacada</h5>
+                                <h5 class="card-title text-white">Thinkpad X1 Carbon</h5>
+
+                                <div class="row align-items-center">
+                                    <div class="col-md-5 text-center">
+                                        <img src="assets/img/Thinkpad-x1.png" alt="thinkpad x1" class="thinkpad-main">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p class="card-text">Procesador: Intel Core i7 de 10.ª / 11.ª Generación (vPro).
+                                        </p>
+                                        <p class="card-text">Gráficos: Intel UHD Graphics / Intel Iris Xe.</p>
+                                        <p class="card-text">Memoria RAM: 16 GB LPDDR3 / LPDDR4x (soldada).</p>
+                                        <p class="card-text">Almacenamiento: 512 GB / 1 TB SSD PCIe NVMe M.2.</p>
+                                        <p class="card-text">Construcción y Chasis: Fibra de carbono de calidad
+                                            satelital y
+                                            aleación
+                                            de magnesio.</p>
+                                        <p class="card-text">Peso: Desde 1.09 kg (increíblemente ligera).</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <section class="col-lg-6 col-md-6">
+                        <div class="card bg-dark text-light border-secondary h-100">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-borderless align-middle mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Serie</th>
+                                                <th>Procesador</th>
+                                                <th>Estado</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Serie X (ej. X1 Carbon)</td>
+                                                <td>Intel Core i7</td>
+                                                <td><span class="badge bg-success">En producción</span></td>
+                                                <td><a href="modelos.html" class="btn btn-danger btn-sm">Detalles</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serie T (ej. T480)</td>
+                                                <td>Intel Core i5</td>
+                                                <td><span class="badge bg-secondary">Descatalagado</span></td>
+                                                <td><a href="modelos.html" class="btn btn-danger btn-sm">Detalles</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Serie P (Workstation)</td>
+                                                <td>Intel Xeon / i9</td>
+                                                <td><span class="badge bg-success">En producción</span></td>
+                                                <td><a href="modelos.html" class="btn btn-danger btn-sm">Detalles</a></td>
+                                            </tr>
+                                        </tbody> 
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </main>
 
         </div>
     </div>
 
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    <!-- JS de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
 
